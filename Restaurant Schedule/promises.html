@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+        <script>
+            function getStudent(){
+                return new Promise(function(resolve, reject){
+                    setTimeout( () => {
+                        reject("something went wrong");
+                    }, 500);
+                });
+            }
+            getStudent().then(success, failture);
+
+            function success(){
+
+                console.log("success");
+            }
+
+            function failture(errormessege){
+            console.log(errormessege);
+            }
+        </script>
+
+
+    <body>
+
+    </body>
+</html>
