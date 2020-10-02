@@ -11,3 +11,12 @@ body{
     
     
 }
+h1{
+    text-align : center;
+    background : silver;
+    color : teal;
+    font-size : 18px;
+}
+ul li{
+    list-style-type: circle;
+}
