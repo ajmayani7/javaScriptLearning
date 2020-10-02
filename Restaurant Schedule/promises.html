@@ -7,19 +7,26 @@
             function getStudent(){
                 return new Promise(function(resolve, reject){
                     setTimeout( () => {
-                        reject("something went wrong");
+                        const error = true;
+                        if(!error){
+                            success();
+                        }
+                        else{
+                           failure('We accured error!')
+                        }
                     }, 500);
                 });
             }
-            getStudent().then(success, failture);
+            getStudent().then(success).catch(failure(err));
 
+            //when successfully get student in database
             function success(){
 
                 console.log("success");
             }
-
-            function failture(errormessege){
-            console.log(errormessege);
+            
+            function failure(err){
+            console.log(err);
             }
         </script>
 
